@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import Button from "./Button";
 export default class Navbar extends Component {
     constructor(props) {
         super(props);
@@ -21,7 +21,7 @@ export default class Navbar extends Component {
                     </ul>
                 </div>
                 <div className="nav--btn">
-                    <button className="invite--btn">Request Invite</button>
+                    <Button _classname={"btn"} _function={console.log("Invitation clicked")} _value={"Request Invite"} />
                 </div>
             </nav>
         )
