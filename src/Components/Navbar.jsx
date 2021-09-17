@@ -8,10 +8,10 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav className="navbar">
-                <div className="nav--ico">
+                <div className="navbar--ico">
                     <img id="navbar--logo" src={this.props.navIconUrl} alt="" />
                 </div>
-                <div className="nav--menu">
+                <div className="navbar--nav">
                     <ul>
                         {
                             this.props.navItems.map(item =>
@@ -20,8 +20,8 @@ export default class Navbar extends Component {
                         }
                     </ul>
                 </div>
-                <div className="nav--btn">
-                    <Button _classname={"btn"} _function={console.log("Invitation clicked")} _value={"Request Invite"} />
+                <div>
+                    <Button _classname={"navbar--btn"} _function={console.log("Invitation clicked")} _value={"Request Invite"} />
                 </div>
             </nav>
         )

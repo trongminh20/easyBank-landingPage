@@ -70,13 +70,17 @@ export default class App extends Component {
         return (
             <div id="wrapper">
                 <Navbar navItems={this.menu} navIconUrl={"./images/logo.svg"} />
-                <Slider _introduction={"breaf intro duction"} _imgUrl={"./images/image-mockups.png"} />
+                <Slider _introTitle={"Next generation digital banking"} _introduction={"Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, bidgeting, investing, and much more."} _imgUrl={"./images/image-mockups.png"} />
                 <div className="services">
-                    {
-                        this.services.map(sv =>
-                            <Column id={sv.id} _classname={"service--col"} _imgUrl={sv.imgUrl} _title={sv.title} _content={sv.content} />
-                        )
-                    }
+                    <h1>Why Choose Easybank</h1>
+                    <p>We leverage Open Banking to turn your bank account account into your financial hub. Control your finances like never before. </p>
+                    <div className="service--detail">
+                        {
+                            this.services.map(sv =>
+                                <Column id={sv.id} _classname={"service--col"} _imgUrl={sv.imgUrl} _title={sv.title} _content={sv.content} />
+                            )
+                        }
+                    </div>
                 </div>
                 <div className="articles">
                     {
