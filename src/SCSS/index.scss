@@ -25,12 +25,19 @@ html,
     bottom: 0;
 }
 body {
+    @media (min-width: 1300px) {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
     font-family: "Public Sans", sans-serif;
 }
 
 p {
     font-size: $content--font--size;
     color: $grayish--blue;
+    line-height: 1.5;
 }
 
 .navbar {
@@ -44,6 +51,7 @@ p {
     position: fixed;
     top: 0px;
     z-index: 10;
+
     &--nav ul {
         @media (min-width: $desktop--resolution) {
             display: flex;
@@ -81,7 +89,7 @@ p {
         flex-direction: column;
         row-gap: 1.5rem;
         top: 10rem;
-        left: 10%;
+        left: 5%;
 
         h1 {
             font-size: 45px;
@@ -95,10 +103,11 @@ p {
     }
 
     &--img {
-        width: 50%;
+        width: 60%;
         overflow: hidden;
         #img--bg {
-            box-sizing: content-box;
+            height: 120vh;
+            width: 70vw;
         }
 
         #img--mockup {
@@ -113,8 +122,9 @@ p {
 
 .btn {
 }
+
 .col-info {
-    margin: 5px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -147,7 +157,7 @@ p {
         width: 80%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 25%);
         align-items: center;
         gap: 1rem;
         margin-top: 3rem;
@@ -165,12 +175,13 @@ p {
                 height: 5rem;
             }
         }
+
         .col--title {
             color: $dark--blue;
             font-weight: lighter;
         }
         .col--content {
-            font-size: 1rem;
+            font-size: 0.7rem;
         }
     }
 }
@@ -203,6 +214,9 @@ p {
             justify-content: space-around;
             background-color: $white;
         }
+        .col-info {
+            margin-left: 1rem;
+        }
         .col--img img {
             width: 100%;
             height: 200px;
@@ -217,7 +231,7 @@ p {
             font-weight: lighter;
         }
         .col--content {
-            font-size: 1rem;
+            font-size: 0.8rem;
             margin-bottom: 10px;
         }
     }
@@ -228,5 +242,18 @@ p {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 20vh;
+    height: 30vh;
+    &--navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        column-gap: 2rem;
+        .nav--link {
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: $light--gray;
+            }
+        }
+    }
 }
