@@ -14,8 +14,8 @@ export default class Slider extends Component {
             <div className="slider">
                 <div className="slider--intro">
                     <h1>{this._introTitle}</h1>
-                    <p>{this._introduction}</p>
-                    <Button _classname={"slider--btn"} _value={"Request Invite"} _function={console.log("header button clicked")} />
+                    <p id="brief--intro" >{this._introduction}</p>
+                    <Button _classname={"slider--btn btn"} _value={"Request Invite"} _function={console.log("header button clicked")} />
                 </div>
                 <div className="slider--img">
                     <img id="img--bg" src="./images/bg-intro-desktop.svg" alt="" />

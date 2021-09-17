@@ -13,10 +13,14 @@ export default class Column extends Component {
     render() {
         return (
             <div className={this._classname}>
-                <img className="col--img" src={this._imgUrl} alt="" />
-                <p className="col--subheader">{this._subheader}</p>
-                <h2 className="col--title">{this._title}</h2>
-                <p className="col--content" >{this._content}</p>
+                <div className="col--img">
+                    <img src={this._imgUrl} alt="" />
+                </div>
+                <div className="col-info">
+                    <p className="col--subheader">{this._subheader}</p>
+                    <h2 className="col--title">{this._title}</h2>
+                    <p className="col--content" >{this._content}</p>
+                </div>
             </div>
         )
     }

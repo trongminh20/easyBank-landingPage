@@ -72,22 +72,29 @@ export default class App extends Component {
                 <Navbar navItems={this.menu} navIconUrl={"./images/logo.svg"} />
                 <Slider _introTitle={"Next generation digital banking"} _introduction={"Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, bidgeting, investing, and much more."} _imgUrl={"./images/image-mockups.png"} />
                 <div className="services">
-                    <h1>Why Choose Easybank</h1>
-                    <p>We leverage Open Banking to turn your bank account account into your financial hub. Control your finances like never before. </p>
-                    <div className="service--detail">
+                    <div className="services--intro">
+                        <h1>Why Choose Easybank</h1>
+                        <p>We leverage Open Banking to turn your bank account account into your financial hub. Control your finances like never before. </p>
+                    </div>
+                    <div className="services--detail">
                         {
                             this.services.map(sv =>
-                                <Column id={sv.id} _classname={"service--col"} _imgUrl={sv.imgUrl} _title={sv.title} _content={sv.content} />
+                                <Column id={sv.id} _classname={"services--col"} _imgUrl={sv.imgUrl} _title={sv.title} _content={sv.content} />
                             )
                         }
                     </div>
                 </div>
                 <div className="articles">
-                    {
-                        this.articles.map(
-                            art => <Column _classname="art--col" _imgUrl={art.imgUrl} _subheader={art.subheader} _title={art.title} _content={art.content} />
-                        )
-                    }
+                    <div className="articles--intro">
+                        <h1>Latest Articles</h1>
+                    </div>
+                    <div className="articles--list">
+                        {
+                            this.articles.map(
+                                art => <Column _classname="art--col" _imgUrl={art.imgUrl} _subheader={art.subheader} _title={art.title} _content={art.content} />
+                            )
+                        }
+                    </div>
                 </div>
                 <Footer />
             </div>
