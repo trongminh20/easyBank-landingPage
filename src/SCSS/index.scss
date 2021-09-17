@@ -1,7 +1,22 @@
 @import "./reset.scss";
-@import "./font.scss";
 @import "./variables.scss";
 @import "./mixin.scss";
+@import "./font.scss";
 @import "./navbar.scss";
 @import "./button.scss";
 @import "./footer.scss";
+@import "./slider.scss";
+
+#wrapper {
+    max-width: 100%;
+    width: 100%;
+    min-width: 70%;
+    overflow: hidden;
+    @media (min-width: $laptop--resolution) {
+        width: 100%;
+    }
+}
+
+p {
+    line-height: 1.5;
+}

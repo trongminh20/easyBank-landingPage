@@ -13,13 +13,13 @@ export default class Slider extends Component {
         return (
             <div className="slider">
                 <div className="slider--intro">
-                    <h1>{this._introTitle}</h1>
+                    <h1 id="slider--title">{this._introTitle}</h1>
                     <p id="brief--intro" >{this._introduction}</p>
                     <Button _classname={"slider--btn btn"} _value={"Request Invite"} _function={console.log("header button clicked")} />
                 </div>
                 <div className="slider--img">
-                    <img id="img--bg" src="./images/bg-intro-desktop.svg" alt="" />
-                    <img id="img--mockup" src={this._imgUrl} alt="" />
+                    <img className="slider--img--bg" src="./images/bg-intro-desktop.svg" alt="" />
+                    <img className="slider--img--mockup" src={this._imgUrl} alt="" />
                 </div>
             </div>
         )

@@ -3,6 +3,11 @@
     height: 4rem;
     align-items: center;
     justify-content: space-around;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $white;
     &--ico {
     }
     &--nav {
