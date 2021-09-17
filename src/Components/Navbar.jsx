@@ -20,8 +20,8 @@ export default class Navbar extends Component {
                         }
                     </ul>
                 </div>
-                <div>
-                    <Button _classname={"navbar--btn"} _function={console.log("Invitation clicked")} _value={"Request Invite"} />
+                <div className="navbar--btn">
+                    <Button _classname={"btn"} _function={console.log("Invitation clicked")} _value={"Request Invite"} />
                 </div>
             </nav>
         )

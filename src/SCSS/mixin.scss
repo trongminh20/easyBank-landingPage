@@ -1,0 +1,16 @@
+@mixin flexDisplay($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    @if $direction == column or $direction == column-reverse {
+        row-gap: $gap;
+    } @else if $direction == row or $direction == row-reverse {
+        column-gap: $gap;
+    }
+}
+
+@mixin gridDisplay($cols, $rows, $gap) {
+    display: grid;
+    grid-template-columns: $cols;
+    grid-template-rows: $rows;
+    gap: $gap;
+}

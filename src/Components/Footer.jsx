@@ -53,19 +53,17 @@ export default class Footer extends Component {
                         <li className="nav--link"><a href="#">Contact</a></li>
                         <li className="nav--link"><a href="#">Blog</a></li>
                     </ul>
-
                     <ul>
                         <li className="nav--link"><a href="#">Careers</a></li>
                         <li className="nav--link"><a href="#">Support</a></li>
                         <li className="nav--link"><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div>
-                    <Button _classname={"footer--btn"} _function={console.log('footer button clicked')} _value={"Request Invite"} />
+                <div className="footer--btn">
+                    <Button _classname={"btn"} _function={console.log('footer button clicked')} _value={"Request Invite"} />
                     <p id="copyrights">Easybank. All Rights Reserved</p>
                 </div>
             </div>
-
         )
     }
 }

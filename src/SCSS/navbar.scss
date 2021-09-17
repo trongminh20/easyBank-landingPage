@@ -1,0 +1,29 @@
+.navbar {
+    @include flexDisplay(row, 10px);
+    height: 4rem;
+    align-items: center;
+    justify-content: space-around;
+    &--ico {
+    }
+    &--nav {
+        ul {
+            display: none;
+            @media (min-width: $laptop--resolution) {
+                @include flexDisplay(row, 1rem);
+            }
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: $grayish--blue;
+                }
+                &:hover {
+                    border-bottom: 3px solid green;
+                    a {
+                        color: $dark--blue;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -69,8 +69,13 @@ export default class App extends Component {
     render() {
         return (
             <div id="wrapper">
-                <Navbar navItems={this.menu} navIconUrl={"./images/logo.svg"} />
-                <Slider _introTitle={"Next generation digital banking"} _introduction={"Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, bidgeting, investing, and much more."} _imgUrl={"./images/image-mockups.png"} />
+                <Navbar navItems={this.menu}
+                    navIconUrl={"./images/logo.svg"} />
+
+                <Slider _introTitle={"Next generation digital banking"}
+                    _introduction={"Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, bidgeting, investing, and much more."}
+                    _imgUrl={"./images/image-mockups.png"} />
+
                 <div className="services">
                     <div className="services--intro">
                         <h1>Why Choose Easybank</h1>
