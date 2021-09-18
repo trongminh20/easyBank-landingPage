@@ -1,7 +1,7 @@
 .slider {
     width: 100%;
     position: relative;
-    height: 100vh;
+    height: 80vh;
     padding-bottom: 2rem;
     @include flexDisplay(column-reverse, 0);
     @media (min-width: $laptop--resolution) {

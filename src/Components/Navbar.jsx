@@ -11,7 +11,7 @@ export default class Navbar extends Component {
                 <div className="navbar--ico">
                     <img id="navbar--logo" src={this.props.navIconUrl} alt="" />
                 </div>
-                <div className="navbar--nav">
+                <div className="navbar--nav" id="navbar--menu" style={this.props._resStyle}>
                     <ul>
                         {
                             this.props.navItems.map(item =>
@@ -20,6 +20,7 @@ export default class Navbar extends Component {
                         }
                     </ul>
                 </div>
+                <button className="responsive--btn" onClick={this.props._resStyleChange}><i className="fas fa-bars"></i></button>
                 <div className="navbar--btn">
                     <Button _classname={"btn"} _function={console.log("Invitation clicked")} _value={"Request Invite"} />
                 </div>

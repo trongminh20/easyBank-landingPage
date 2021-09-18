@@ -12,7 +12,22 @@
     }
     &--nav {
         ul {
-            display: none;
+            @media (max-width: $mobile--resolution) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 1rem;
+                position: absolute;
+                background-color: white;
+                width: 80%;
+                top: 5rem;
+                right: 10%;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                border-radius: 10px;
+            }
             @media (min-width: $laptop--resolution) {
                 @include flexDisplay(row, 1rem);
             }
@@ -29,6 +44,19 @@
                     }
                 }
             }
+        }
+    }
+    &--btn {
+        @media (max-width: $mobile--resolution) {
+            display: none;
+        }
+    }
+    .responsive--btn {
+        border: none;
+        background: none;
+        font-size: 1rem;
+        @media (min-width: $laptop--resolution) {
+            display: none;
         }
     }
 }

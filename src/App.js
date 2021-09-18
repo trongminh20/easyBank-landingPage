@@ -7,6 +7,10 @@ import Footer from "./Components/Footer";
 export default class App extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            display: "flex"
+        }
+        this.changeStyle = this.changeStyle.bind(this);
     }
     menu = ["Home", "About", "Contact", "Blog", "Careers"];
     services = [
@@ -65,12 +69,37 @@ export default class App extends Component {
             content: "After a lot of hard work by the whole team, we're excited to launch our closed beta. It's easy to request an invite through the site ..."
         }
     ];
-
+    changeStyle() {
+        if (this.state.display == "none") {
+            this.setState(state => {
+                return {
+                    display: "flex"
+                }
+            })
+        } else {
+            this.setState(state => {
+                return {
+                    display: "none"
+                }
+            })
+        }
+    }
     render() {
+        {
+            window.addEventListener("resize", () => {
+                this.setState(state => {
+                    return {
+                        display: "flex"
+                    }
+                })
+            })
+        }
         return (
-            <div id="wrapper">
+
+            < div id="wrapper" >
+
                 <Navbar navItems={this.menu}
-                    navIconUrl={"./images/logo.svg"} />
+                    navIconUrl={"./images/logo.svg"} _resStyle={this.state} _resStyleChange={this.changeStyle} />
 
                 <Slider _introTitle={"Next generation digital banking"}
                     _introduction={"Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, bidgeting, investing, and much more."}
@@ -102,7 +131,7 @@ export default class App extends Component {
                     </div>
                 </div>
                 <Footer />
-            </div>
+            </div >
         )
     }
 }
