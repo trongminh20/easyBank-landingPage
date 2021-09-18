@@ -1,0 +1,54 @@
+.articles {
+    @include flexDisplay(column, 1rem);
+    align-items: center;
+    justify-content: center;
+    background-color: $light--gray;
+
+    &--intro {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    &--list {
+        @include flexDisplay(column, 1rem);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        @media (min-width: $laptop--resolution) {
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            gap: 1rem;
+            width: 100%;
+        }
+        .art--col {
+            @include flexDisplay(column, 1rem);
+            align-items: center;
+            justify-content: center;
+            background-color: $white;
+
+            .col--img {
+                img {
+                    width: 100%;
+                    @media (min-width: $laptop--resolution) {
+                        height: 12rem;
+                    }
+                }
+            }
+            .col--info {
+                @include flexDisplay(column, 1rem);
+                margin: auto 1rem 1rem 1rem;
+            }
+            .col--subheader {
+                font-size: 0.7rem;
+                color: $grayish--blue;
+            }
+            .col--title {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

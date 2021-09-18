@@ -1,0 +1,69 @@
+.services {
+    @media (min-width: $laptop--resolution) {
+        height: 70vh;
+        @include flexDisplay(column, 3rem);
+        justify-content: center;
+    }
+    &--intro,
+    &--detail {
+        @media (min-width: $laptop--resolution) {
+            margin-left: 10%;
+        }
+    }
+    @include flexDisplay(column, 2rem);
+    @media (max-width: $mobile--resolution) {
+        align-items: center;
+    }
+    background-color: $light--grayish--blue;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    &--intro {
+        @include flexDisplay(column, 1rem);
+        width: 40%;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: lighter;
+        }
+        @media (max-width: $mobile--resolution) {
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            h1,
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    &--detail {
+        @include flexDisplay(column, 1rem);
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: $laptop--resolution) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            width: 85%;
+        }
+    }
+    &--col {
+        width: 80%;
+        @include flexDisplay(column, 1rem);
+        .col--img {
+            @media (max-width: $mobile--resolution) {
+                margin: auto;
+            }
+        }
+        .col--info {
+            @include flexDisplay(column, 1rem);
+            @media (max-width: $mobile--resolution) {
+                text-align: center;
+            }
+        }
+        .col--content {
+            font-size: 0.8rem;
+            color: $grayish--blue;
+        }
+    }
+}

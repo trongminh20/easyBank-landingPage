@@ -1,14 +1,16 @@
 .slider {
     width: 100%;
-    height: 100vh;
     position: relative;
+    height: 100vh;
+    padding-bottom: 2rem;
     @include flexDisplay(column-reverse, 0);
     @media (min-width: $laptop--resolution) {
         width: 100%;
-        border: 1px solid red;
+    }
+    @media (max-width: $mobile--resolution) {
     }
     &--intro {
-        @include flexDisplay(column, 1rem);
+        @include flexDisplay(column, 0);
         z-index: 2;
         align-items: center;
         width: 100%;
@@ -24,6 +26,8 @@
             margin: auto 1rem auto 1rem;
             @media (min-width: $laptop--resolution) {
                 text-align: unset;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -56,5 +60,8 @@
                 top: -10rem;
             }
         }
+    }
+    &--btn {
+        margin-top: 1rem;
     }
 }

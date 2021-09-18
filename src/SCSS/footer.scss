@@ -1,0 +1,9 @@
+.footer {
+    background-color: $dark--blue;
+    height: 15vh;
+    @media (min-width: $laptop--resolution) {
+        @include flexDisplay(row, 3rem);
+        justify-content: space-around;
+        align-items: center;
+    }
+}
