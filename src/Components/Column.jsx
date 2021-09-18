@@ -18,7 +18,7 @@ export default class Column extends Component {
                 </div>
                 <div className="col--info">
                     <p className="col--subheader">{this._subheader}</p>
-                    <h2 className="col--title">{this._title}</h2>
+                    <h2 className="col--title"><a href="#">{this._title}</a></h2>
                     <p className="col--content" >{this._content}</p>
                 </div>
             </div>

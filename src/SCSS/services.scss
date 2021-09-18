@@ -61,6 +61,15 @@
                 text-align: center;
             }
         }
+        .col--title {
+            a {
+                text-decoration: none;
+                color: $dark--blue;
+                &:hover {
+                    color: $lime--green;
+                }
+            }
+        }
         .col--content {
             font-size: 0.8rem;
             color: $grayish--blue;

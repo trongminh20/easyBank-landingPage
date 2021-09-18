@@ -9,23 +9,23 @@ export default class Footer extends Component {
     _icon = [
         {
             alt: "facebook",
-            icoUrl: "./images/icon-facebook.svg"
+            icoUrl: "fab fa-facebook-square"
         },
         {
             alt: "youtube",
-            icoUrl: "./images/icon-youtube.svg"
+            icoUrl: "fab fa-youtube"
         },
         {
             alt: "pinterest",
-            icoUrl: "./images/icon-pinterest.svg"
+            icoUrl: "fab fa-pinterest"
         },
         {
             alt: "instagram",
-            icoUrl: "./images/icon-instagram.svg"
+            icoUrl: "fab fa-instagram"
         },
         {
             alt: "twitter",
-            icoUrl: "./images/icon-twitter.svg"
+            icoUrl: "fab fa-twitter"
         }
     ];
 

@@ -23,6 +23,12 @@
     }
     &--social {
         @include flexDisplay(row, 1rem);
+        .fab {
+            color: white;
+            &:hover {
+                color: $lime--green;
+            }
+        }
     }
     &--navigation {
         @include flexDisplay(row, 3rem);
@@ -37,6 +43,11 @@
             a {
                 text-decoration: none;
                 color: $light--gray;
+            }
+            &:hover {
+                a {
+                    color: $lime--green;
+                }
             }
         }
 

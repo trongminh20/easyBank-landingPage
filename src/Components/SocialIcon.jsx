@@ -9,7 +9,7 @@ export default class SocialIcon extends Component {
 
     render() {
         return (
-            <img className="social--ico" src={this._icoUrl} alt={this._alt} />
+            <a href="#"><i className={this._icoUrl}></i></a>
         )
     }
 }
