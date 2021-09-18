@@ -1,9 +1,52 @@
 .footer {
     background-color: $dark--blue;
-    height: 15vh;
+    @include flexDisplay(column, 2rem);
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @media (min-width: $laptop--resolution) {
         @include flexDisplay(row, 3rem);
         justify-content: space-around;
         align-items: center;
+        height: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &--btn,
+    &--logo {
+        @include flexDisplay(column, 3rem);
+        @media (max-width: $mobile--resolution) {
+            row-gap: 1rem;
+        }
+        justify-content: space-around;
+        align-items: center;
+    }
+    &--social {
+        @include flexDisplay(row, 1rem);
+    }
+    &--navigation {
+        @include flexDisplay(row, 3rem);
+        ul {
+            @include flexDisplay(column, 1rem);
+            @media (max-width: $mobile--resolution) {
+                align-items: center;
+            }
+        }
+        .nav--link {
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: $light--gray;
+            }
+        }
+
+        @media (max-width: $mobile--resolution) {
+            @include flexDisplay(column, 1rem);
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    #copyrights {
+        color: $light--gray;
     }
 }

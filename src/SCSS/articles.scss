@@ -10,6 +10,9 @@
         h1 {
             font-size: 2rem;
         }
+        @media (min-width: $laptop--resolution) {
+            width: 83%;
+        }
     }
 
     &--list {
