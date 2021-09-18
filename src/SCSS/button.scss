@@ -4,4 +4,7 @@
     border-radius: 25px;
     width: 10rem;
     height: 2rem;
+    &:hover {
+        opacity: 0.5;
+    }
 }
